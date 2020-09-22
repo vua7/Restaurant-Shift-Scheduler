@@ -1,8 +1,7 @@
 # f20ritchie
-<<<<<<< HEAD
+
 This is where we will describe our project.
 =======
-<<<<<<< HEAD
 
 Group members:
 Albert Vu
