@@ -11,4 +11,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+
+    /**
+     * main method for project
+     * @param args
+     */
+    public static void main(String[] args) {
+
+
+
+    }
+
 }
