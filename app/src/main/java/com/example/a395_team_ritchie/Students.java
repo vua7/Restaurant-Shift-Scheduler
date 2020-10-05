@@ -33,7 +33,7 @@ public class Students {
         //really bad and inefficient algorithm to find student
         int size = studentList.size();
         for (int i = 0; i < size; i++) { //traverse through whole list (probably a bad idea)
-            if (studentList.get(i).getName() == studentName) {
+            if (studentList.get(i).getName().equals(studentName)) {
                 studentList.remove(i); //remove student object from the list
                 break;
             }
