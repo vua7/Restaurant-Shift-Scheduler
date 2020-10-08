@@ -28,11 +28,11 @@ public class Weekday implements Shifts{
         String temp = timeOfDay.toLowerCase();
         if(!isDayFull()){
             if(temp.equals("morning")){
-                if(!morningShiftFull())
+                if(!morningShiftFull() && !morningShift.contains(student) && !afternoonShift.contains(student))
                     morningShift.add(student);
             }
             else{
-                if(!afternoonShiftFull())
+                if(!afternoonShiftFull() && !morningShift.contains(student) && !afternoonShift.contains(student))
                     afternoonShift.add(student);
             }
         }
