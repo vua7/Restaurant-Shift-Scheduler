@@ -23,7 +23,7 @@ public class Weekend implements Shifts{
      */
     @Override
     public void fillShift(Student student, String timeOfDay) {
-        if(!isDayFull())
+        if(!isDayFull() && !dayShift.contains(student))
             dayShift.add(student);
 
     }
