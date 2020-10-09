@@ -72,6 +72,18 @@ public class Student {
     }
 
     /**
+     * This method overrides the equals method so this Object can me compared
+     * @param obj the object to be compared
+     * @return true if the objects are the same, false if not
+     */
+    @Override
+    public boolean equals(Object obj){
+        if(obj instanceof Student)
+            return this.name.equals(((Student) obj).name);
+        return false;
+    }
+
+    /**
      * This method prints the object
      * @return string of the object
      */
