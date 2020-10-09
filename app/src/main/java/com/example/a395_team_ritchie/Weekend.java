@@ -6,14 +6,16 @@ import java.util.ArrayList;
  * This is the Weekend class. It implements the methods from Shifts and adds the students will work
  * the full day. As well, will remove students from the assigned shifts.
  */
-public class Weekend implements Shifts{
+public class Weekend extends Shifts{
     //Instance Variables
     private ArrayList<Student> dayShift;
     public int n = 2;
 
     //Constructor
     Weekend(){
-        dayShift = new ArrayList<Student>(n);
+        super.isBusy = false;
+        super.type = "Weekend";
+        this.dayShift = new ArrayList<Student>(n);
     }
 
     /**

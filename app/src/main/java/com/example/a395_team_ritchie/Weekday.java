@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * This is the Weekday class. It implements the Shifts interface and uses data structures that will
  * hold the correct number of needed students.
  */
-public class Weekday implements Shifts{
+public class Weekday extends Shifts{
     //Instance Variables
     private ArrayList<Student> morningShift;
     private ArrayList<Student> afternoonShift;
@@ -14,8 +14,10 @@ public class Weekday implements Shifts{
 
     //Constructor
     Weekday(){
-        morningShift = new ArrayList<Student>(n);
-        afternoonShift = new ArrayList<Student>(n);
+        super.isBusy = false;
+        super.type = "Weekday";
+        this.morningShift = new ArrayList<Student>(n);
+        this.afternoonShift = new ArrayList<Student>(n);
     }
 
     /**

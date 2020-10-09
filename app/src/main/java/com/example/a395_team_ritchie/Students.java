@@ -1,5 +1,7 @@
 package com.example.a395_team_ritchie;
 
+import androidx.room.Entity;
+
 import java.util.ArrayList;
 import java.util.List;
 
