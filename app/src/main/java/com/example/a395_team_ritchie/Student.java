@@ -1,15 +1,27 @@
 package com.example.a395_team_ritchie;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 /**
  * This class creates the Student object. It contains the methods required to obtain all the
  * necessary information regarding the student.
  */
+@Entity(tableName = "student")
 public class Student {
     //Instance Variables
-    private String name;
-    private String ID;
-    private boolean openCapable;
-    private boolean closeCapable;
+    @PrimaryKey
+    public int id;
+
+    @ColumnInfo(name = "name")
+    public String name;
+
+    @ColumnInfo(name = "openCapable")
+    public boolean openCapable;
+
+    @ColumnInfo(name = "closeCapable")
+    public boolean closeCapable;
 
     //Constructor
     Student(){
@@ -37,16 +49,16 @@ public class Student {
      * This method sets the ID of the student
      * @param newID ID of the student
      */
-    public void setStudentID(String newID){
-        ID = newID;
+    public void setStudentID(int newID){
+        id = newID;
     }
 
     /**
      * This method returns the ID of the student
      * @return string containg the ID of the student
      */
-    public String getID(){
-        return ID;
+    public int getID(){
+        return id;
     }
 
     /**
@@ -94,7 +106,7 @@ public class Student {
         newString.append(name);
         newString.append("\n");
         newString.append("ID: ");
-        newString.append(ID);
+        newString.append(id);
         newString.append("\n");
         newString.append("Can Open: ");
         if (openCapable)
