@@ -13,7 +13,9 @@ import org.junit.runner.RunWith;
 import java.io.IOException;
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
+//import static org.hamcrest.MatcherAssert.assertThat;
+//import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.*;
 
 
 @RunWith(AndroidJUnit4.class)
@@ -48,10 +50,26 @@ public class DatabaseTest {
         testPerson.setStudentName("Test Student, id=1");
 
         studentDao.insertStudent(testPerson);
-
         Student getPerson = studentDao.getStudent(1);
-
         assert(testPerson.getName().equals(getPerson.getName()));
+
+        Student testPerson2 = new Student();
+        testPerson2.setStudentID(2);
+        testPerson2.setStudentName("Test Student2, id=2");
+
+        System.out.println("test1. " + testPerson.getName());
+        System.out.println("test2. " + testPerson2.getName());
+
+        studentDao.insertStudent(testPerson2);
+        Student getPerson2 = studentDao.getStudent(2);
+        assert(testPerson2.getName().equals(getPerson2.getName()));
+
+        assertFalse(testPerson2.getName().equals(getPerson.getName())) ;
+
+        System.out.println("get1. " + getPerson.getName());
+        System.out.println("get2. " + getPerson2.getName());
+
+        assertEquals(testPerson2.getName(), getPerson2.getName());
 
     }
 }

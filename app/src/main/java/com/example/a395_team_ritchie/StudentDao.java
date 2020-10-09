@@ -18,10 +18,14 @@ public interface StudentDao {
     @Query("SELECT * FROM student WHERE id = :id")
     Student getStudent(int id);
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    //@Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert
     void insertStudent(Student student);
 
-    /*@Update
-    void updateStudent(int id);*/
+    @Update
+    void updateStudent(Student student);
+
+    @Delete
+    void deleteStudent(Student... student);
 
 }

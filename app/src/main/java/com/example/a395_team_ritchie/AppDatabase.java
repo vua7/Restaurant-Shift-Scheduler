@@ -20,7 +20,4 @@ public abstract class AppDatabase extends RoomDatabase {
         return instance;
     }
 
-    /*AppDatabase db = Room.databaseBuilder(getApplicationContext(),
-            AppDatabase.class, "database-name").build();*/
-
 }

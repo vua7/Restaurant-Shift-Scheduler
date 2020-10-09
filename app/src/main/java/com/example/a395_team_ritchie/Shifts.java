@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey;
  * shifts: weekday, weekend.
  */
 @Entity(tableName = "shift")
-abstract class Shifts {
+public class Shifts {
     //Instance Vars
     @PrimaryKey
     public int date;
@@ -21,7 +21,7 @@ abstract class Shifts {
     public String type;
 
     //Methods
-    public abstract void fillShift(Student student, String timeOfDay);
-    public abstract boolean isDayFull();
-    public abstract void clearShift(String studentName);
+    public void fillShift(Student student, String timeOfDay) {};
+    public boolean isDayFull() { return false; };
+    public void clearShift(String studentName) {};
 }
