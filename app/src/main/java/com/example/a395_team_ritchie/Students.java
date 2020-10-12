@@ -44,6 +44,11 @@ public class Students {
         studentTotal -= 1; //adjust studentTotal after remove
     }
 
+    /**
+     * This method returns the student object matching the parameter
+     * @param studentName
+     * @return student object or null
+     */
     public Student getStudent (String studentName) {
         for (int i = 0; i < studentList.size(); i++) {
             if (studentList.get(i).getName().equals(studentName)) {
@@ -53,8 +58,20 @@ public class Students {
         return null;
     }
 
-    public int getStudentTotal() {
+    /**
+     * This method traverses and prints all students in the Students object
+     */
+    public void traverseStudents () {
+        for (int i = 0; i < studentList.size(); i++) {
+            System.out.println(this.studentList.get(i));
+        }
+    }
 
+    /**
+     * This method returns the total number of students in Students object
+     * @return
+     */
+    public int getStudentTotal() {
         return this.studentTotal;
     }
 }
