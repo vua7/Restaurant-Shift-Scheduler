@@ -53,4 +53,8 @@ public class Students {
         return null;
     }
 
+    public int getStudentTotal() {
+
+        return this.studentTotal;
+    }
 }
