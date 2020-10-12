@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This is the Month class. It is used for storing the the shifts and printing them out.
+ * This is the Month class. It is used for storing the shifts and printing them out.
  */
 public class Month {
     //Instance Variable
