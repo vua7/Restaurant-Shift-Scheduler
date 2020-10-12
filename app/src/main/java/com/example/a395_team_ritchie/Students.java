@@ -44,4 +44,13 @@ public class Students {
         studentTotal -= 1; //adjust studentTotal after remove
     }
 
+    public Student getStudent (String studentName) {
+        for (int i = 0; i < studentList.size(); i++) {
+            if (studentList.get(i).getName().equals(studentName)) {
+                return studentList.get(i);
+            }
+        }
+        return null;
+    }
+
 }
