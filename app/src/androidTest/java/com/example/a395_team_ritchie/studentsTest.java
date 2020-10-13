@@ -95,12 +95,28 @@ public class studentsTest {
 
         System.out.println("--- DISPLAYING SHIFTS ---");
         testMonth1.printShifts();
-        System.out.println("--- DISPLAYING STUDENTS ---");
+
+        Student otherStudent1 = new Student();
+        otherStudent1.setStudentName("Bill");
+        otherStudent1.setStudentID(12345);
+        otherStudent1.canOpen();
+
+        Student otherStudent2 = new Student();
+        otherStudent2.setStudentName("Bob");
+        otherStudent2.setStudentID(67890);
+        otherStudent2.canClose();
+
+        System.out.println("--- DISPLAYING STUDENTS OPENING/CLOSING CAPABLE ---");
+        System.out.println(otherStudent1);
+        System.out.println(otherStudent2);
+
+        System.out.println("--- DISPLAYING STUDENTS IN LIST ---");
         testStudents1.traverseStudents();
 
         testStudents1.removeStudent("John Wick");
         testStudents1.removeStudent("John Rambo");
-        System.out.println("--- DISPLAYING STUDENTS ---");
+
+        System.out.println("--- DISPLAYING STUDENTS IN LIST ---");
         testStudents1.traverseStudents();
 
     }
