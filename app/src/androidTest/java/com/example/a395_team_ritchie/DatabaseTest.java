@@ -39,12 +39,6 @@ public class DatabaseTest {
 
     @Test
     public void writeUserAndReadInList() throws Exception {
-        /*User user = TestUtil.createUser(3);
-        user.setName("george");
-        userDao.insert(user);
-        List<User> byName = userDao.findUsersByName("george");
-        assertThat(byName.get(0), equalTo(user));*/
-
         Student testPerson = new Student();
         testPerson.setStudentID(1);
         testPerson.setStudentName("Test Student, id=1");
@@ -62,14 +56,17 @@ public class DatabaseTest {
 
         studentDao.insertStudent(testPerson2);
         Student getPerson2 = studentDao.getStudent(2);
-        assert(testPerson2.getName().equals(getPerson2.getName()));
 
+        assert(testPerson2.getName().equals(getPerson2.getName()));
         assertFalse(testPerson2.getName().equals(getPerson.getName())) ;
 
         System.out.println("get1. " + getPerson.getName());
         System.out.println("get2. " + getPerson2.getName());
 
         assertEquals(testPerson2.getName(), getPerson2.getName());
+
+        studentDao.deleteStudent(testPerson);
+        studentDao.deleteStudent(testPerson2);
 
     }
 }
