@@ -17,10 +17,11 @@ public class Students {
      * This method adds students to the list of Student objects
      * @param studentName is the name of student
      */
-    public void addStudent (String studentName) {
+    public void addStudent (String studentName, int id) {
 
         Student temp = new Student(); //create new Student object
         temp.setStudentName(studentName); //sets the fields of Student object
+        temp.setStudentID(id);
         studentList.add(temp); //add student object to the list
 
         studentTotal += 1; //adjust studentTotal after add
@@ -35,7 +36,7 @@ public class Students {
         //really bad and inefficient algorithm to find student
         int size = studentList.size();
         for (int i = 0; i < size; i++) { //traverse through whole list (probably a bad idea)
-            if (studentList.get(i).getName().equals(studentName)) {
+            if (studentList.get(i).getName().toLowerCase().equals(studentName.toLowerCase())) {
                 studentList.remove(i); //remove student object from the list
                 break;
             }
@@ -51,7 +52,7 @@ public class Students {
      */
     public Student getStudent (String studentName) {
         for (int i = 0; i < studentList.size(); i++) {
-            if (studentList.get(i).getName().equals(studentName)) {
+            if (studentList.get(i).getName().toLowerCase().equals(studentName.toLowerCase())) {
                 return studentList.get(i);
             }
         }
@@ -65,6 +66,115 @@ public class Students {
         for (int i = 0; i < studentList.size(); i++) {
             System.out.println(this.studentList.get(i));
         }
+    }
+
+    /**
+     * This method finds the student and updates their email
+     * @param name the name of the student
+     * @param email the students email
+     */
+    public void updateStudentEmail(String name, String email){
+        for (int i = 0; i < studentList.size(); i++){
+            if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase()))
+                studentList.get(i).setEmail(email);
+        }
+    }
+
+    /**
+     * This method find the student and updates their dates available to work
+     * @param name the name of the student
+     * @param dates the dates the student is available
+     */
+    public void updateStudentDates(String name, List<Integer> dates){
+        for (int i = 0; i < studentList.size(); i++){
+            if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase()))
+                studentList.get(i).setDates(dates);
+        }
+    }
+
+    /**
+     * Update if the student is capable to open
+     * @param name the name of the student
+     */
+    public void updateStudentOpenCapable(String name){
+        for (int i = 0; i < studentList.size(); i++){
+            if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase()))
+                studentList.get(i).canOpen();
+        }
+    }
+
+    /**
+     * Update if the student is capable to close
+     * @param name the name of the student
+     */
+    public void updateStudentCloseCapable(String name){
+        for (int i = 0; i < studentList.size(); i++){
+            if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase()))
+                studentList.get(i).canClose();
+        }
+    }
+
+    public String getStudentEmail(String name){
+        for (int i = 0; i < studentList.size(); i++){
+            if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase()))
+                return studentList.get(i).getEmail();
+        }
+        return null;
+    }
+
+    /**
+     * This method returns the dates the student is available to work
+     * @param name the name of the student
+     * @return the dates the student can work
+     */
+    public List<Integer> getStudentDates(String name){
+        List <Integer> temp = new ArrayList<>();
+        for (int i = 0; i < studentList.size(); i++){
+            if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase())){
+                temp = studentList.get(i).getDates();
+                return temp;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * This method returns if the student is capable to open or not
+     * @param name the name of the student
+     * @return true if they can open, false if they can't
+     */
+    public boolean canStudentOpen(String name){
+        for(int i = 0; i < studentList.size(); i++){
+            if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase()))
+                return studentList.get(i).openCapable;
+        }
+        return false;
+    }
+
+    /**
+     * This method returns if the student is capable to close or not
+     * @param name the name of the student
+     * @return true if the student can open, false if they can't
+     */
+    public boolean canStudentClose(String name){
+        for(int i = 0; i < studentList.size(); i++){
+            if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase()))
+                return studentList.get(i).closeCapable;
+        }
+        return false;
+    }
+
+    /**
+     * This method returns of the student can open and close
+     * @param name the name of the student
+     * @return true if they can, false if they can't
+     */
+    public boolean canStudentOpenAndClose(String name){
+        for(int i = 0; i < studentList.size(); i++){
+            if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase()))
+                return studentList.get(i).canOpenClose();
+        }
+        return false;
     }
 
     /**
