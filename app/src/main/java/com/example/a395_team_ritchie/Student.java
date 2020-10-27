@@ -4,6 +4,9 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * This class creates the Student object. It contains the methods required to obtain all the
  * necessary information regarding the student.
@@ -23,8 +26,13 @@ public class Student {
     @ColumnInfo(name = "closeCapable")
     public boolean closeCapable;
 
+    public String email;
+
+    public List<Integer> dates;
+
     //Constructor
     Student(){
+        dates = new ArrayList<>();
         openCapable = false;
         closeCapable = false;
     }
@@ -76,11 +84,45 @@ public class Student {
     }
 
     /**
-     * This method indicates of the student is capable of opeing and closing
+     * This method indicates of the student is capable of opening and closing
      * @return true if the student can open and close, false if not
      */
     public boolean canOpenClose(){
         return openCapable && closeCapable;
+    }
+
+    /**
+     * This method sets the students email
+     * @param newEmail the email to be stored
+     */
+    public void setEmail(String newEmail){
+        email = newEmail;
+    }
+
+    /**
+     * This method gets the students email
+     * @return the email
+     */
+    public String getEmail(){
+        return email;
+    }
+
+    /**
+     * This method sets the students available dates
+     * @param newDates the dates to be stored
+     */
+    public void setDates(List<Integer> newDates){
+        dates = newDates;
+    }
+
+    /**
+     * This method returns a copy of the dates list
+     * @return the dates list
+     */
+    public List<Integer> getDates(){
+        List<Integer> temp = new ArrayList<>();
+        temp = dates;
+        return temp;
     }
 
     /**
@@ -108,6 +150,9 @@ public class Student {
         newString.append("ID: ");
         newString.append(id);
         newString.append("\n");
+        newString.append("Email: ");
+        newString.append(email);
+        newString.append("\n");
         newString.append("Can Open: ");
         if (openCapable)
             newString.append("Qualified");
@@ -122,6 +167,9 @@ public class Student {
         newString.append("\n");
         if (canOpenClose())
             newString.append("Can Open and Close: Qualified\n");
+        newString.append("Dates available: ");
+        newString.append(dates);
+        newString.append("\n");
         return newString.toString();
     }
 }
