@@ -1,17 +1,11 @@
 package com.example.a395_team_ritchie;
 
-import android.content.Context;
-
-import androidx.room.Room;
-import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import java.io.IOException;
-import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -38,8 +32,8 @@ public class studentsTest {
 
     @Test
     public void testStudents() {
-        testStudents1.addStudent("John Doe");
-        testStudents1.addStudent("Jane Doe");
+        testStudents1.addStudent("John Doe", 12345);
+        testStudents1.addStudent("Jane Doe", 12345);
 
         assert (testStudents1.getStudentTotal() == 2);
 
@@ -49,15 +43,15 @@ public class studentsTest {
         assert (testStudents1.getStudentTotal() == 0);
 
         Students testStudents2 = new Students();
-        testStudents2.addStudent("Other Joe");
+        testStudents2.addStudent("Other Joe", 12345);
 
         assertFalse (testStudents1 == testStudents2);
 
         Student testStudent1 = new Student();
         Student testStudent2 = new Student();
 
-        testStudents1.addStudent("John Wick");
-        testStudents1.addStudent("John Rambo");
+        testStudents1.addStudent("John Wick", 12345);
+        testStudents1.addStudent("John Rambo", 12345);
         testStudent1 = testStudents1.getStudent("John Wick");
         testStudent2 = testStudents1.getStudent("John Rambo");
 
@@ -86,15 +80,6 @@ public class studentsTest {
 
         testBusyWeekend1.fillShift(testStudents2.getStudent("Other Joe"), "Full Day");
         assert (testBusyWeekend1.isDayFull() == true);
-
-        Month testMonth1 = new Month("October", "2020");
-        testMonth1.addShift(testWeekday1);
-        testMonth1.addShift(testWeekend1);
-        testMonth1.addShift(testBusyWeekday1);
-        testMonth1.addShift(testBusyWeekend1);
-
-        System.out.println("--- DISPLAYING SHIFTS ---");
-        testMonth1.printShifts();
 
         Student otherStudent1 = new Student();
         otherStudent1.setStudentName("Bill");
