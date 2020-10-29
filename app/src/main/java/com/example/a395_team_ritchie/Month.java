@@ -32,7 +32,7 @@ public class Month {
         }
         else if(this.month.toLowerCase().equals("february")){
             monthNum = 2;
-            if(this.year % 4 == 0 && this.year % 100 != 0)
+            if(this.year % 4 == 0 && (this.year % 100 != 0 || this.year % 400 == 0))
                 n = 29;
             else
                 n = 28;
