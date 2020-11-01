@@ -85,7 +85,7 @@ public class Students {
      * @param name the name of the student
      * @param dates the dates the student is available
      */
-    public void updateStudentDates(String name, List<Integer> dates){
+    public void updateStudentDates(String name, ArrayList<Integer> dates){
         for (int i = 0; i < studentList.size(); i++){
             if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase()))
                 studentList.get(i).setDates(dates);
