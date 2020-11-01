@@ -26,9 +26,11 @@ public class Student {
     @ColumnInfo(name = "closeCapable")
     public boolean closeCapable;
 
+    @ColumnInfo(name = "email")
     public String email;
 
-    public List<Integer> dates;
+    @ColumnInfo(name = "dates")
+    public ArrayList<Integer> dates;
 
     //Constructor
     Student(){
@@ -111,7 +113,7 @@ public class Student {
      * This method sets the students available dates
      * @param newDates the dates to be stored
      */
-    public void setDates(List<Integer> newDates){
+    public void setDates(ArrayList<Integer> newDates){
         dates = newDates;
     }
 
