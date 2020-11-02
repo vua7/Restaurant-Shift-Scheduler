@@ -242,4 +242,12 @@ public class Month {
             System.out.print(shifts[i]);
         }
     }
+
+    /**
+     * This method returns the size of the array list
+     * @return the size of the list, representing the number of days
+     */
+    public int getSize(){
+        return n;
+    }
 }
