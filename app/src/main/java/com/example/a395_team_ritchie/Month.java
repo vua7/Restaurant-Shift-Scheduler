@@ -28,7 +28,7 @@ public class Month {
             n = 31;
             monthNum = 1;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
         else if(this.month.toLowerCase().equals("february")){
             monthNum = 2;
@@ -37,67 +37,67 @@ public class Month {
             else
                 n = 28;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
         else if(this.month.toLowerCase().equals("march")){
             monthNum = 3;
             n = 31;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
         else if(this.month.toLowerCase().equals("april")){
             monthNum = 4;
             n = 30;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
         else if(this.month.toLowerCase().equals("may")){
             monthNum = 5;
             n = 31;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
         else if(this.month.toLowerCase().equals("june")){
             monthNum = 6;
             n = 30;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
         else if(this.month.toLowerCase().equals("july")){
             monthNum = 7;
             n = 31;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
         else if(this.month.toLowerCase().equals("august")){
             monthNum = 8;
             n = 31;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
         else if(this.month.toLowerCase().equals("september")){
             monthNum = 9;
             n = 30;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
         else if(this.month.toLowerCase().equals("october")){
             monthNum = 10;
             n = 31;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
         else if(this.month.toLowerCase().equals("november")){
             monthNum = 11;
             n = 30;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
         else{ //"december"
             monthNum = 12;
             n = 31;
             shifts = new Shifts[n];
-            populateShifts(monthNum);
+            populateShifts();
         }
     }
 
@@ -105,7 +105,7 @@ public class Month {
      * This method populates the array with empty shifts based on the number of days in the month
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    private void populateShifts(int monthNum) {
+    private void populateShifts() {
         for (int i = 0; i < n; i++) {
             LocalDate localDate = LocalDate.of(this.year, monthNum, i+1);
             DayOfWeek dayOfWeek = DayOfWeek.from(localDate);
