@@ -23,6 +23,8 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.cardview:cardview:1.0.0'
+
 
     /*
      * Room persistence library - Database
