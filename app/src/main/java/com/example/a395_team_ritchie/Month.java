@@ -107,15 +107,15 @@ public class Month {
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void populateShifts(){
         for(int i = 0; i < n; i++){
-            LocalDate localDate = LocalDate.of(this.year, 1, i+1);
+            LocalDate localDate = LocalDate.of(this.year, monthNum, i+1);
             DayOfWeek dayOfWeek = DayOfWeek.from(localDate);
-            if(dayOfWeek.getValue() != 6 || dayOfWeek.getValue() != 7){
-                Weekday newWeekday = new Weekday();
-                shifts[i] = newWeekday;
-            }
-            else{
+            if(dayOfWeek.getValue() == 6 || dayOfWeek.getValue() == 7){
                 Weekend newWeekend = new Weekend();
                 shifts[i] = newWeekend;
+            }
+            else{
+                Weekday newWeekday = new Weekday();
+                shifts[i] = newWeekday;
             }
         }
     }
@@ -145,7 +145,7 @@ public class Month {
      */
     public void printShifts(){
         System.out.print(month + " " + year + " Shifts\n");
-        for(int i = 0; i < 2; i++){
+        for(int i = 0; i < n; i++){
             System.out.print(shifts[i]);
         }
     }
