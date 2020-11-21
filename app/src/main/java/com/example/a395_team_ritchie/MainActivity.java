@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,13 +15,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final CalendarView cal = (CalendarView) findViewById(R.id.calendarView);
 
         Button studentsButton = (Button) findViewById(R.id.studentsButton);
         studentsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), StudentViewActivity.class);
-                startActivity(startIntent);
+                Intent studentIntent = new Intent(getApplicationContext(), StudentViewActivity.class);
+                startActivity(studentIntent);
+            }
+        });
+
+        Button dayButton = (Button) findViewById(R.id.dayButton);
+        dayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String date = "Date: " + cal.getDate();
+                Intent dayIntent = new Intent(getApplicationContext(), DayViewActivity.class);
+                dayIntent.putExtra("DATE", date);
+                startActivity(dayIntent);
             }
         });
     }
