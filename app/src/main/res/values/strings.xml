@@ -4,4 +4,6 @@
     <string name="button_send">View Students</string>
     <string name="add_student">Add Student</string>
     <string name="welcome">Welcome</string>
+    <string name="view_day">View Day</string>
+    <string name="date">Date</string>
 </resources>
