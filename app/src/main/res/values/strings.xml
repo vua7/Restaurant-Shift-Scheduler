@@ -6,4 +6,10 @@
     <string name="welcome">Welcome</string>
     <string name="view_day">View Day</string>
     <string name="date">Date</string>
+    <string name="enter_student_name">Enter Student Name</string>
+    <string name="enter_student_id">Enter Student ID</string>
+    <string name="enter_student_email">Enter Student Email</string>
+    <string name="opening_capable">Opening Capable?</string>
+    <string name="closing_capable">Closing Capable?</string>
+    <string name="monday">Monday</string>
 </resources>
