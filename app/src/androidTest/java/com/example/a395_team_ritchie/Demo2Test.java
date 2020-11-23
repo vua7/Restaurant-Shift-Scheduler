@@ -49,13 +49,13 @@ public class Demo2Test {
         testStudent1 = testStudents1.getStudent("John Wick");
         testStudent2 = testStudents1.getStudent("John Rambo");
         testStudent1.setEmail("test@gmail.com");
-        ArrayList<Integer> dates = new ArrayList<>();
-        dates.add(1);
-        dates.add(2);
-        dates.add(3);
-        dates.add(4);
-        dates.add(5);
-        testStudent1.setDates(dates);
+        ArrayList<String> days = new ArrayList<>();
+        days.add("Monday");
+        days.add("Tuesday");
+        days.add("Wednesday");
+        days.add("Thursday");
+        days.add("Friday");
+        testStudent1.setDays(days);
 
         Student otherStudent1 = new Student();
         otherStudent1.setStudentName("Bill");
