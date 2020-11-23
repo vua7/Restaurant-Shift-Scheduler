@@ -29,12 +29,15 @@ public class Student {
     @ColumnInfo(name = "email")
     public String email;
 
-    @ColumnInfo(name = "dates")
-    public ArrayList<Integer> dates;
+    @ColumnInfo(name = "days")
+    public List<String> days;
+
+    public List<String> times;
 
     //Constructor
     Student(){
-        dates = new ArrayList<>();
+        days = new ArrayList<>();
+        times = new ArrayList<>();
         openCapable = false;
         closeCapable = false;
     }
@@ -110,21 +113,39 @@ public class Student {
     }
 
     /**
-     * This method sets the students available dates
-     * @param newDates the dates to be stored
+     * This method will update the shifts that the student can work
+     * @param newDays the days they can work
      */
-    public void setDates(ArrayList<Integer> newDates){
-        dates = newDates;
+    public void setDays(List<String> newDays){
+        days = newDays;
+    }
+
+    /**
+     * This method adds a time to the times array
+     * @param newTimes the time they can work
+     */
+    public void setTimes(List<String> newTimes){
+        times = newTimes;
     }
 
     /**
      * This method returns a copy of the dates list
      * @return the dates list
      */
-    public List<Integer> getDates(){
-        List<Integer> temp = new ArrayList<>();
-        temp = dates;
+    public List<String> getDays(){
+        List<String> temp = new ArrayList<>();
+        temp = days;
         return temp;
+    }
+
+    /**
+     * This method returns the time list
+     * @return the time they can work
+     */
+    public List<String> getTimes(){
+        List<String> temp = new ArrayList<>();
+        temp = times;
+        return times;
     }
 
     /**
@@ -169,8 +190,12 @@ public class Student {
         newString.append("\n");
         if (canOpenClose())
             newString.append("Can Open and Close: Qualified\n");
-        newString.append("Dates available: ");
-        newString.append(dates);
+        newString.append("Shifts available: \n");
+        newString.append("Days: ");
+        newString.append(days);
+        newString.append("\n");
+        newString.append("Times: ");
+        newString.append(times);
         newString.append("\n");
         return newString.toString();
     }

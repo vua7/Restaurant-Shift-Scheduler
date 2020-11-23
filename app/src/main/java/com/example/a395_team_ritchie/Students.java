@@ -32,8 +32,6 @@ public class Students {
      * @param studentName is the name of student
      */
     public void removeStudent (String studentName) {
-
-        //really bad and inefficient algorithm to find student
         int size = studentList.size();
         for (int i = 0; i < size; i++) { //traverse through whole list (probably a bad idea)
             if (studentList.get(i).getName().toLowerCase().equals(studentName.toLowerCase())) {
@@ -81,14 +79,26 @@ public class Students {
     }
 
     /**
-     * This method find the student and updates their dates available to work
+     * This method finds the student and updates their dates available to work
      * @param name the name of the student
-     * @param dates the dates the student is available
+     * @param days the dates the student is available
      */
-    public void updateStudentDates(String name, ArrayList<Integer> dates){
+    public void updateStudentDays(String name, ArrayList<String> days){
         for (int i = 0; i < studentList.size(); i++){
             if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase()))
-                studentList.get(i).setDates(dates);
+                studentList.get(i).setDays(days);
+        }
+    }
+
+    /**
+     * This method finds the student and updates the times they can work
+     * @param name the name of the student
+     * @param times the times they can work
+     */
+    public void updateStudentTimes(String name, ArrayList<String> times){
+        for (int i = 0; i < studentList.size(); i++){
+            if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase()))
+                studentList.get(i).setDays(times);
         }
     }
 
@@ -123,15 +133,26 @@ public class Students {
     }
 
     /**
-     * This method returns the dates the student is available to work
+     * This method returns the days the student is available to work
      * @param name the name of the student
-     * @return the dates the student can work
+     * @return the days the student can work
      */
-    public List<Integer> getStudentDates(String name){
-        List <Integer> temp = new ArrayList<>();
+    public List<String> getStudentDates(String name){
+        List <String> temp = new ArrayList<>();
         for (int i = 0; i < studentList.size(); i++){
             if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase())){
-                temp = studentList.get(i).getDates();
+                temp = studentList.get(i).getDays();
+                return temp;
+            }
+        }
+        return null;
+    }
+
+    public List<String> getStudentTimes(String name){
+        List <String> temp = new ArrayList<>();
+        for (int i = 0; i < studentList.size(); i++){
+            if(studentList.get(i).getName().toLowerCase().equals(name.toLowerCase())){
+                temp = studentList.get(i).getTimes();
                 return temp;
             }
         }
