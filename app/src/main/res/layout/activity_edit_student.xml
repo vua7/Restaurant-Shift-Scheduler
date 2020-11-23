@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditStudentActivity">
+
+    <Button
+        android:id="@+id/editStudentButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Update Student"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditSundaySwitch" />
+
+    <Switch
+        android:id="@+id/EditSundaySwitch"
+        android:layout_width="204dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="4dp"
+        android:text="Sunday (Full day)"
+        app:layout_constraintEnd_toEndOf="@+id/editSaturdaySwitch"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editSaturdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editSaturdaySwitch" />
+
+    <Switch
+        android:id="@+id/editFridayPMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="PM"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editFridayAMSwitch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <Switch
+        android:id="@+id/editFridayAMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="AM"
+        app:layout_constraintStart_toEndOf="@+id/editFridaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editThursdayAMSwitch" />
+
+    <Switch
+        android:id="@+id/editFridaySwitch"
+        android:layout_width="124dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:text="Friday"
+        app:layout_constraintStart_toStartOf="@+id/editThursdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editThursdaySwitch" />
+
+    <Switch
+        android:id="@+id/editWednesdaySwitch"
+        android:layout_width="124dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:text="Wednesday"
+        app:layout_constraintStart_toStartOf="@+id/editTuesdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editTuesdaySwitch" />
+
+    <Switch
+        android:id="@+id/editWednesdayPMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="PM"
+        app:layout_constraintStart_toEndOf="@+id/editWednesdayAMSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editTuesdayPMSwitch" />
+
+    <Switch
+        android:id="@+id/editThursdaySwitch"
+        android:layout_width="124dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:text="Thursday"
+        app:layout_constraintStart_toStartOf="@+id/editWednesdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editWednesdaySwitch" />
+
+    <Switch
+        android:id="@+id/editThursdayPMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="PM"
+        app:layout_constraintStart_toEndOf="@+id/editThursdayAMSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editWednesdayPMSwitch" />
+
+    <Switch
+        android:id="@+id/editWednesdayAMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
+        android:text="AM"
+        app:layout_constraintStart_toEndOf="@+id/editWednesdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editTuesdayAMSwitch" />
+
+    <Switch
+        android:id="@+id/editThursdayAMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="AM"
+        app:layout_constraintStart_toEndOf="@+id/editThursdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editWednesdayAMSwitch" />
+
+    <Switch
+        android:id="@+id/editMondayPMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="7dp"
+        android:text="PM"
+        app:layout_constraintStart_toEndOf="@+id/editMondayAMSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editCloseSwitch" />
+
+    <Switch
+        android:id="@+id/editMondaySwitch"
+        android:layout_width="124dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/monday"
+        app:layout_constraintStart_toStartOf="@+id/editStudentEmailField"
+        app:layout_constraintTop_toBottomOf="@+id/editCloseSwitch" />
+
+    <Switch
+        android:id="@+id/editTuesdaySwitch"
+        android:layout_width="124dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:text="Tuesday"
+        app:layout_constraintStart_toStartOf="@+id/editMondaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editMondaySwitch" />
+
+    <Switch
+        android:id="@+id/editTuesdayAMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="AM"
+        app:layout_constraintStart_toEndOf="@+id/editTuesdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editMondayAMSwitch" />
+
+    <Switch
+        android:id="@+id/editTuesdayPMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="PM"
+        app:layout_constraintStart_toEndOf="@+id/editTuesdayAMSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editMondayPMSwitch" />
+
+    <Switch
+        android:id="@+id/editSaturdaySwitch"
+        android:layout_width="204dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="8dp"
+        android:text="Saturday (Full day)"
+        app:layout_constraintStart_toStartOf="@+id/editFridaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editFridaySwitch" />
+
+    <Switch
+        android:id="@+id/editMondayAMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="7dp"
+        android:text="AM"
+        app:layout_constraintStart_toEndOf="@+id/editMondaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/editCloseSwitch" />
+
+    <EditText
+        android:id="@+id/editStudentIDField"
+        android:layout_width="285dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text="Enter Student ID"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/editCloseSwitch"
+        android:layout_width="251dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/closing_capable"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editOpenSwitch" />
+
+    <Switch
+        android:id="@+id/editOpenSwitch"
+        android:layout_width="251dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/opening_capable"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStudentEmailField" />
+
+    <EditText
+        android:id="@+id/editStudentNameField"
+        android:layout_width="285dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text="Enter Student Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStudentIDField" />
+
+    <EditText
+        android:id="@+id/editStudentEmailField"
+        android:layout_width="285dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="9dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text="@string/enter_student_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStudentNameField" />
+
+    <Button
+        android:id="@+id/removeStudentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Remove Student"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStudentButton2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
