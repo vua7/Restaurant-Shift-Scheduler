@@ -7,144 +7,177 @@
     tools:context=".AddStudentActivity">
 
     <Switch
-        android:id="@+id/sundaySwitch"
-        android:layout_width="205dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="188dp"
-        android:text="Sunday (Full Day)"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mondaySwitch2" />
+        android:id="@+id/mondayPMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="PM"
+        app:layout_constraintStart_toEndOf="@+id/mondayAMSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/closeSwitch" />
 
     <Switch
-        android:id="@+id/saturdaySwitch"
-        android:layout_width="204dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="152dp"
-        android:text="Saturday (Full day)"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mondaySwitch2" />
+        android:id="@+id/thursdayPMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
+        android:text="PM"
+        app:layout_constraintStart_toEndOf="@+id/thursdayAMSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/wednesdayPMSwitch" />
 
     <Switch
-        android:id="@+id/thursdaySwitch"
-        android:layout_width="125dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="80dp"
-        android:text="Thursday"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mondaySwitch2" />
+        android:id="@+id/tudesdayPMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="PM"
+        app:layout_constraintStart_toEndOf="@+id/tuesdayAMSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/mondayPMSwitch" />
 
     <Switch
-        android:id="@+id/tuesdaySwitch"
-        android:layout_width="125dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="8dp"
-        android:text="Tuesday"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mondaySwitch2" />
+        android:id="@+id/fridayPMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
+        android:text="PM"
+        app:layout_constraintStart_toEndOf="@+id/fridayAMSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/thursdayPMSwitch" />
 
     <Switch
-        android:id="@+id/wednesdaySwitch"
-        android:layout_width="125dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="44dp"
-        android:text="Wednesday"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mondaySwitch2" />
+        android:id="@+id/wednesdayPMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="PM"
+        app:layout_constraintStart_toEndOf="@+id/wednesdayAMSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/tudesdayPMSwitch" />
+
+    <Switch
+        android:id="@+id/wednesdayAMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="13dp"
+        android:text="AM"
+        app:layout_constraintStart_toEndOf="@+id/wednesdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/tuesdayAMSwitch" />
+
+    <Switch
+        android:id="@+id/mondayAMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="12dp"
+        android:text="AM"
+        app:layout_constraintStart_toEndOf="@+id/mondaySwitch2"
+        app:layout_constraintTop_toBottomOf="@+id/closeSwitch" />
+
+    <Switch
+        android:id="@+id/tuesdayAMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="12dp"
+        android:text="AM"
+        app:layout_constraintStart_toEndOf="@+id/tuesdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/mondayAMSwitch" />
+
+    <Switch
+        android:id="@+id/thursdayAMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="9dp"
+        android:text="AM"
+        app:layout_constraintStart_toEndOf="@+id/thursdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/wednesdayAMSwitch" />
+
+    <Switch
+        android:id="@+id/fridayAMSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="9dp"
+        android:text="AM"
+        app:layout_constraintStart_toEndOf="@+id/fridaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/thursdayAMSwitch" />
 
     <Switch
         android:id="@+id/mondaySwitch2"
         android:layout_width="124dp"
         android:layout_height="25dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:text="@string/monday"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/studentEmailField"
         app:layout_constraintTop_toBottomOf="@+id/closeSwitch" />
 
     <Switch
-        android:id="@+id/amSwitch5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="20dp"
-        android:text="AM"
-        app:layout_constraintEnd_toStartOf="@+id/pmSwitch1"
-        app:layout_constraintTop_toBottomOf="@+id/pmSwitch1" />
+        android:id="@+id/sundaySwitch"
+        android:layout_width="206dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="9dp"
+        android:text="Sunday (Full Day)"
+        app:layout_constraintStart_toStartOf="@+id/saturdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/saturdaySwitch" />
 
-    <Switch
-        android:id="@+id/pmSwitch5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="64dp"
-        android:text="PM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pmSwitch1" />
-
-    <Switch
-        android:id="@+id/amSwitch4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="20dp"
-        android:text="AM"
-        app:layout_constraintEnd_toStartOf="@+id/pmSwitch1"
-        app:layout_constraintTop_toBottomOf="@+id/pmSwitch1" />
-
-    <Switch
-        android:id="@+id/pmSwitch4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="64dp"
-        android:text="PM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pmSwitch1" />
-
-    <Switch
-        android:id="@+id/pmSwitch3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="64dp"
-        android:text="PM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pmSwitch1" />
-
-    <Switch
-        android:id="@+id/amSwitch3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="20dp"
-        android:text="AM"
-        app:layout_constraintEnd_toStartOf="@+id/pmSwitch1"
-        app:layout_constraintTop_toBottomOf="@+id/pmSwitch1" />
-
-    <Switch
-        android:id="@+id/pmSwitch2"
+    <Button
+        android:id="@+id/addStudentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="64dp"
-        android:text="PM"
+        android:text="@string/add_student"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pmSwitch1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sundaySwitch" />
 
     <Switch
-        android:id="@+id/amSwitch2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:text="AM"
-        app:layout_constraintEnd_toStartOf="@+id/pmSwitch1"
-        app:layout_constraintTop_toBottomOf="@+id/pmSwitch1" />
+        android:id="@+id/wednesdaySwitch"
+        android:layout_width="125dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:text="Wednesday"
+        app:layout_constraintStart_toStartOf="@+id/tuesdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/tuesdaySwitch" />
+
+    <Switch
+        android:id="@+id/tuesdaySwitch"
+        android:layout_width="125dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:text="Tuesday"
+        app:layout_constraintStart_toStartOf="@+id/mondaySwitch2"
+        app:layout_constraintTop_toBottomOf="@+id/mondaySwitch2" />
+
+    <Switch
+        android:id="@+id/fridaySwitch"
+        android:layout_width="125dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="9dp"
+        android:text="Friday"
+        app:layout_constraintStart_toStartOf="@+id/thursdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/thursdaySwitch" />
+
+    <Switch
+        android:id="@+id/saturdaySwitch"
+        android:layout_width="206dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="9dp"
+        android:text="Saturday (Full day)"
+        app:layout_constraintStart_toStartOf="@+id/fridaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/fridaySwitch" />
+
+    <Switch
+        android:id="@+id/thursdaySwitch"
+        android:layout_width="125dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="9dp"
+        android:text="Thursday"
+        app:layout_constraintStart_toStartOf="@+id/wednesdaySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/wednesdaySwitch" />
 
     <EditText
         android:id="@+id/studentEmailField"
@@ -157,17 +190,17 @@
         android:text="@string/enter_student_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentIDField" />
+        app:layout_constraintTop_toBottomOf="@+id/studentNameField" />
 
     <EditText
-        android:id="@+id/studentNameField"
+        android:id="@+id/studentIDField"
         android:layout_width="285dp"
         android:layout_height="53dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:text="@string/enter_student_name"
+        android:text="@string/enter_student_id"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -175,17 +208,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/studentIDField"
+        android:id="@+id/studentNameField"
         android:layout_width="283dp"
         android:layout_height="52dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:text="@string/enter_student_id"
+        android:text="@string/enter_student_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentNameField" />
+        app:layout_constraintTop_toBottomOf="@+id/studentIDField" />
 
     <Switch
         android:id="@+id/openSwitch"
@@ -209,45 +242,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/openSwitch" />
 
-    <Switch
-        android:id="@+id/fridaySwitch"
-        android:layout_width="125dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="116dp"
-        android:text="Friday"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mondaySwitch2" />
-
-    <Switch
-        android:id="@+id/amSwitch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="20dp"
-        android:text="AM"
-        app:layout_constraintEnd_toStartOf="@+id/pmSwitch1"
-        app:layout_constraintTop_toBottomOf="@+id/closeSwitch" />
-
-    <Switch
-        android:id="@+id/pmSwitch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="64dp"
-        android:text="PM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/closeSwitch" />
-
-    <Button
-        android:id="@+id/addStudentButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="496dp"
-        android:layout_marginEnd="12dp"
-        android:text="@string/add_student"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.777"
-        app:layout_constraintStart_toEndOf="@+id/sundaySwitch"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
