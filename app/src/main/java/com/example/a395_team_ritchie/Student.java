@@ -30,9 +30,10 @@ public class Student {
     public String email;
 
     @ColumnInfo(name = "days")
-    public List<String> days;
+    public ArrayList<String> days;
 
-    public List<String> times;
+    @ColumnInfo(name = "times")
+    public ArrayList<String> times;
 
     //Constructor
     Student(){
@@ -116,7 +117,7 @@ public class Student {
      * This method will update the shifts that the student can work
      * @param newDays the days they can work
      */
-    public void setDays(List<String> newDays){
+    public void setDays(ArrayList<String> newDays){
         days = newDays;
     }
 
@@ -124,7 +125,7 @@ public class Student {
      * This method adds a time to the times array
      * @param newTimes the time they can work
      */
-    public void setTimes(List<String> newTimes){
+    public void setTimes(ArrayList<String> newTimes){
         times = newTimes;
     }
 

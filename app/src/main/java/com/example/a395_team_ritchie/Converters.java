@@ -10,14 +10,27 @@ import java.util.ArrayList;
 
 public class Converters {
 
-    @TypeConverter
-    public static ArrayList<Integer> fromDb(String value) {
+    /*@TypeConverter
+    public static ArrayList<Integer> intFromDb(String value) {
         Type listType = new TypeToken<ArrayList<Integer>>() {}.getType();
         return new Gson().fromJson(value, listType);
     }
 
     @TypeConverter
-    public static String toDb(ArrayList<Integer> list) {
+    public static String intToDb(ArrayList<Integer> list) {
+        Gson gson = new Gson();
+        String json = gson.toJson(list);
+        return json;
+    }*/
+
+    @TypeConverter
+    public static ArrayList<String> fromDb(String value) {
+        Type listType = new TypeToken<ArrayList<String>>() {}.getType();
+        return new Gson().fromJson(value, listType);
+    }
+
+    @TypeConverter
+    public static String toDb(ArrayList<String> list) {
         Gson gson = new Gson();
         String json = gson.toJson(list);
         return json;
