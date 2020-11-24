@@ -125,7 +125,7 @@
         app:layout_constraintTop_toBottomOf="@+id/saturdaySwitch" />
 
     <Button
-        android:id="@+id/addStudentButton"
+        android:id="@+id/addStudentButtonFinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

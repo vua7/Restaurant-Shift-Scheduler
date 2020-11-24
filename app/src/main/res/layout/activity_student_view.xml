@@ -15,10 +15,16 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/addStudentbutton"
+            android:id="@+id/addStudentButtonInitial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/add_student" />
+
+        <Button
+            android:id="@+id/updateStudentButtonInitial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Student" />
 
 
     </LinearLayout>
