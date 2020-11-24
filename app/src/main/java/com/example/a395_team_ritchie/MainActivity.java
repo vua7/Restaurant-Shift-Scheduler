@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
@@ -30,9 +32,14 @@ public class MainActivity extends AppCompatActivity {
         dayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String date = "Date: " + cal.getDate();
+
+                SimpleDateFormat simpleDate = new SimpleDateFormat("dd/MM/yyyy");
+                String selectedDate = simpleDate.format(new Date(cal.getDate()));
+
+                //String date = "Date: " + cal.getDate();
                 Intent dayIntent = new Intent(getApplicationContext(), DayViewActivity.class);
-                dayIntent.putExtra("DATE", date);
+                //dayIntent.putExtra("DATE", date);
+                dayIntent.putExtra("DATE", selectedDate);
                 startActivity(dayIntent);
             }
         });
