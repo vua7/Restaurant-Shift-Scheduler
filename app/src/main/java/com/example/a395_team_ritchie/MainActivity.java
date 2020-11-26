@@ -1,5 +1,6 @@
 package com.example.a395_team_ritchie;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,12 +13,26 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+
+    private CalendarView cal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final CalendarView cal = (CalendarView) findViewById(R.id.calendarView);
+        cal = (CalendarView) findViewById(R.id.calendarView);
+        cal.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                String selectedDate = year + "/" + (month + 1) + "/" + dayOfMonth;
+
+                Intent dayIntent = new Intent(getApplicationContext(), DayViewActivity.class);
+                dayIntent.putExtra("DATE", selectedDate);
+                startActivity(dayIntent);
+            }
+        });
+
+        //final CalendarView cal = (CalendarView) findViewById(R.id.calendarView);
 
         Button studentsButton = (Button) findViewById(R.id.studentsButton);
         studentsButton.setOnClickListener(new View.OnClickListener() {
@@ -29,9 +44,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button dayButton = (Button) findViewById(R.id.dayButton);
+
+
+
+        // ------------------------------------------
+
+
+        
+
+
         dayButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+
+
 
                 SimpleDateFormat simpleDate = new SimpleDateFormat("dd/MM/yyyy");
                 String selectedDate = simpleDate.format(new Date(cal.getDate()));
