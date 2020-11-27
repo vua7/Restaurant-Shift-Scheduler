@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Switch;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddStudentActivity extends AppCompatActivity {
 
@@ -205,6 +206,9 @@ public class AddStudentActivity extends AppCompatActivity {
                 System.out.println("RETRIEVE STUDENT****************************");
                 Student getStudent = studentDao.getStudent(tempNum);
                 System.out.println("Student after insert/retrieve: \n" + getStudent);
+
+                List<Student> dbStudents = studentDao.getAllStudents();
+                System.out.println(dbStudents);
 
             }
         });

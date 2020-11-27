@@ -29,6 +29,12 @@ public class Converters {
         return new Gson().fromJson(value, listType);
     }
 
+    /*@TypeConverter
+    public static ArrayList<Student> manyFromDb(String value) {
+        Type listType = new TypeToken<ArrayList<Student>>() {}.getType();
+        return new Gson().fromJson(value, listType);
+    }*/
+
     @TypeConverter
     public static String toDb(ArrayList<String> list) {
         Gson gson = new Gson();
