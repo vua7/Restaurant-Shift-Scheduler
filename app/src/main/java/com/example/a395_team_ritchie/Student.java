@@ -4,6 +4,9 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +45,15 @@ public class Student {
         openCapable = false;
         closeCapable = false;
     }
+
+    /*public static ArrayList<Student> fromJson(JsonObject dbStudents){
+        ArrayList getStudents = new ArrayList<Student>();
+
+        Gson gson = new Gson();
+        getStudents = gson.fromJson(dbStudents, ArrayList.class);
+
+        return getStudents;
+    }*/
 
     /**
      * This method sets the name of the student
