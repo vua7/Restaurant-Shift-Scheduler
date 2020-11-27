@@ -11,12 +11,13 @@ import java.util.List;
 public class Students {
 
     private int studentTotal = 0;
-    private List<Student> studentList = new ArrayList<>();
+    private ArrayList<Student> studentList = new ArrayList<>();
 
     /**
      * This method adds students to the list of Student objects
      * @param studentName is the name of student
      */
+    /*
     public void addStudent (String studentName, int id) {
 
         Student temp = new Student(); //create new Student object
@@ -25,6 +26,15 @@ public class Students {
         studentList.add(temp); //add student object to the list
 
         studentTotal += 1; //adjust studentTotal after add
+    }
+    */
+
+    /**
+     * This method adds a list of students to the students list
+     * @param students the list of students
+     */
+    public void addStudents(ArrayList<Student> students){
+        studentList = students;
     }
 
     /**
