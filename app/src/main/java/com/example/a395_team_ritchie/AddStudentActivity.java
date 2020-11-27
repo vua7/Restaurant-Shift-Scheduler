@@ -13,11 +13,15 @@ import java.util.ArrayList;
 
 public class AddStudentActivity extends AppCompatActivity {
 
+    public AppDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_student);
 
+        database = AppDatabase.getInstance(this);
+        final StudentDao studentDao = database.getStudentDao();
 
         final Button addStudentButtonFinal = (Button) findViewById(R.id.addStudentButtonFinal);
         addStudentButtonFinal.setOnClickListener(new View.OnClickListener() {
@@ -30,7 +34,7 @@ public class AddStudentActivity extends AppCompatActivity {
                 Student newStudent = new Student();
 
                 EditText editText = findViewById(R.id.studentIDField);
-                int tempNum = Integer.parseInt(editText.getText().toString());
+                final int tempNum = Integer.parseInt(editText.getText().toString());
                 newStudent.setStudentID(tempNum);
 
                 editText = findViewById(R.id.studentNameField);
@@ -194,13 +198,15 @@ public class AddStudentActivity extends AppCompatActivity {
                     newStudent.setTimes((times));
                 }
 
-                System.out.println(newStudent);
+                System.out.println("ADD STUDENT****************************");
+                System.out.println("Student generated: \n" + newStudent);
+                studentDao.insertStudent(newStudent);
+
+                System.out.println("RETRIEVE STUDENT****************************");
+                Student getStudent = studentDao.getStudent(tempNum);
+                System.out.println("Student after insert/retrieve: \n" + getStudent);
+
             }
         });
-
     }
-
-
-
-
 }
