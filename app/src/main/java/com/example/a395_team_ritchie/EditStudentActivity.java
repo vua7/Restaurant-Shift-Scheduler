@@ -2,7 +2,10 @@ package com.example.a395_team_ritchie;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 
@@ -55,7 +58,7 @@ public class EditStudentActivity extends AppCompatActivity {
         Switch editFridayPMSwitch = findViewById(R.id.editFridayPMSwitch);
 
         Switch editSaturdaySwitch = findViewById(R.id.editSaturdaySwitch);
-        Switch editSundaySwitch = findViewById(R.id.editSundaySwitch);
+        Switch editSundaySwitch = findViewById(R.id.EditSundaySwitch);
 
         editOpenSwitch.setChecked(editStudent.canStudentOpen());
         editCloseSwitch.setChecked(editStudent.canStudentClose());
@@ -112,5 +115,19 @@ public class EditStudentActivity extends AppCompatActivity {
             editFridayAMSwitch.setChecked(friTime);
             editFridayPMSwitch.setChecked(!friTime);
         }
+        //Saturday
+        Boolean sat = days.contains("Saturday");
+        editSaturdaySwitch.setChecked(sat);
+        //Sunday
+        Boolean sun = days.contains("Sunday");
+        editSundaySwitch.setChecked(sun);
+
+        Button removeStudent = (Button) findViewById(R.id.removeStudentButtonFinal);
+        removeStudent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }
