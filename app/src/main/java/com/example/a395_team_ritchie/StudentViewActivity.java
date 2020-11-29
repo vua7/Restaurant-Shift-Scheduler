@@ -21,7 +21,7 @@ public class StudentViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student_view);
 
         final Button addStudent = (Button) findViewById(R.id.addStudentButtonInitial);
-        final Button updateStudent = (Button) findViewById(R.id.updateStudentButtonInitial);
+        //final Button updateStudent = (Button) findViewById(R.id.updateStudentButtonInitial);
         final LinearLayout layout = (LinearLayout) findViewById(R.id.studentLinear);
 
         database = AppDatabase.getInstance(this);
@@ -64,13 +64,13 @@ public class StudentViewActivity extends AppCompatActivity {
             }
         });
 
-        updateStudent.setOnClickListener(new View.OnClickListener() {
+        /*updateStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent updateStudentIntent= new Intent(getApplicationContext(), EditStudentActivity.class);
                 startActivity(updateStudentIntent);
             }
+        });*/
 
-        });
     }
 }

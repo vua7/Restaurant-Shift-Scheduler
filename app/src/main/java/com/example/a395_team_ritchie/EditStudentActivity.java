@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.Switch;
+
+import java.util.List;
 
 public class EditStudentActivity extends AppCompatActivity {
 
@@ -18,10 +21,7 @@ public class EditStudentActivity extends AppCompatActivity {
 
         database = AppDatabase.getInstance(this);
         final StudentDao studentDao = database.getStudentDao();
-
         Student editStudent = studentDao.getStudent(inputID);
-        System.out.println(inputID);
-        System.out.println(editStudent);
 
         EditText editStudentIDText = findViewById(R.id.editStudentIDField);
         EditText editStudentNameText = findViewById(R.id.editStudentNameField);
@@ -31,5 +31,86 @@ public class EditStudentActivity extends AppCompatActivity {
         editStudentNameText.setText(editStudent.getName());
         editStudentEmailText.setText(editStudent.getEmail());
 
+        Switch editOpenSwitch = findViewById(R.id.editOpenSwitch);
+        Switch editCloseSwitch = findViewById(R.id.editCloseSwitch);
+
+        Switch editMondaySwitch = findViewById(R.id.editMondaySwitch);
+        Switch editMondayAMSwitch = findViewById(R.id.editMondayAMSwitch);
+        Switch editMondayPMSwitch = findViewById(R.id.editMondayPMSwitch);
+
+        Switch editTuesdaySwitch = findViewById(R.id.editTuesdaySwitch);
+        Switch editTuesdayAMSwitch = findViewById(R.id.editTuesdayAMSwitch);
+        Switch editTuesdayPMSwitch = findViewById(R.id.editTuesdayPMSwitch);
+        
+        Switch editWednesdaySwitch = findViewById(R.id.editWednesdaySwitch);
+        Switch editWednesdayAMSwitch = findViewById(R.id.editWednesdayAMSwitch);
+        Switch editWednesdayPMSwitch = findViewById(R.id.editWednesdayPMSwitch);
+
+        Switch editThursdaySwitch = findViewById(R.id.editThursdaySwitch);
+        Switch editThursdayAMSwitch = findViewById(R.id.editThursdayAMSwitch);
+        Switch editThursdayPMSwitch = findViewById(R.id.editThursdayPMSwitch);
+
+        Switch editFridaySwitch = findViewById(R.id.editFridaySwitch);
+        Switch editFridayAMSwitch = findViewById(R.id.editFridayAMSwitch);
+        Switch editFridayPMSwitch = findViewById(R.id.editFridayPMSwitch);
+
+        Switch editSaturdaySwitch = findViewById(R.id.editSaturdaySwitch);
+        Switch editSundaySwitch = findViewById(R.id.editSundaySwitch);
+
+        editOpenSwitch.setChecked(editStudent.canStudentOpen());
+        editCloseSwitch.setChecked(editStudent.canStudentClose());
+
+        System.out.println(editStudent.days);
+        System.out.println(editStudent.times);
+        //[Monday, Tuesday, Wednesday, Thursday, Friday]
+        //[morning, afternoon, afternoon, afternoon, afternoon]
+
+        List<String> days = editStudent.getDays();
+        List<String> times = editStudent.getTimes();
+        //Monday
+        Boolean mon = days.contains("Monday");
+        int monIndex = days.indexOf("Monday");
+        if (mon) {
+            Boolean monTime = times.get(monIndex).equals("morning") ? true : false;
+            editMondaySwitch.setChecked(true);
+            editMondayAMSwitch.setChecked(monTime);
+            editMondayPMSwitch.setChecked(!monTime);
+        }
+        //Tuesday
+        Boolean tues = days.contains("Tuesday");
+        int tuesIndex = days.indexOf("Tuesday");
+        if (tues) {
+            Boolean tuesTime = times.get(tuesIndex).equals("morning") ? true : false;
+            editTuesdaySwitch.setChecked(true);
+            editTuesdayAMSwitch.setChecked(tuesTime);
+            editTuesdayPMSwitch.setChecked(!tuesTime);
+        }
+        //Wednesday
+        Boolean wed = days.contains("Wednesday");
+        int wedIndex = days.indexOf("Wednesday");
+        if (wed) {
+            Boolean wedTime = times.get(wedIndex).equals("morning") ? true : false;
+            editWednesdaySwitch.setChecked(true);
+            editWednesdayAMSwitch.setChecked(wedTime);
+            editWednesdayPMSwitch.setChecked(!wedTime);
+        }
+        //Thursday
+        Boolean thurs = days.contains("Thursday");
+        int thursIndex = days.indexOf("Thursday");
+        if (thurs) {
+            Boolean thursTime = times.get(thursIndex).equals("morning") ? true : false;
+            editThursdaySwitch.setChecked(true);
+            editThursdayAMSwitch.setChecked(thursTime);
+            editThursdayPMSwitch.setChecked(!thursTime);
+        }
+        //Friday
+        Boolean fri = days.contains("Friday");
+        int friIndex = days.indexOf("Friday");
+        if (fri) {
+            Boolean friTime = times.get(friIndex).equals("morning") ? true : false;
+            editFridaySwitch.setChecked(fri);
+            editFridayAMSwitch.setChecked(friTime);
+            editFridayPMSwitch.setChecked(!friTime);
+        }
     }
 }
