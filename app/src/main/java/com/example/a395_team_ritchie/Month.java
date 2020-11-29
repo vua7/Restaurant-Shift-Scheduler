@@ -16,22 +16,25 @@ public class Month {
     private String month;
     private int monthNum;
     private int year;
+    private int day;
     private int n;
 
     //Constructor
     @RequiresApi(api = Build.VERSION_CODES.O)
-    Month(String month, int year){
-        this.month = month;
-        this.year = year;
+    Month(String date){
+        String[] splitString = date.split("/", 2);
+        this.monthNum = Integer.parseInt(splitString[1]);
+        this.year = Integer.parseInt(splitString[0]);
+        this.day = Integer.parseInt(splitString[2]);
 
-        if(this.month.toLowerCase().equals("january")) {
+        if(this.monthNum == 1) {
             n = 31;
-            monthNum = 1;
+            this.month = "January";
             shifts = new Shifts[n];
             populateShifts();
         }
-        else if(this.month.toLowerCase().equals("february")){
-            monthNum = 2;
+        else if(this.monthNum == 2){
+            this.month = "February";
             if(this.year % 4 == 0 && (this.year % 100 != 0 || this.year % 400 == 0))
                 n = 29;
             else
@@ -39,62 +42,62 @@ public class Month {
             shifts = new Shifts[n];
             populateShifts();
         }
-        else if(this.month.toLowerCase().equals("march")){
-            monthNum = 3;
+        else if(this.monthNum == 3){
+            this.month = "March";
             n = 31;
             shifts = new Shifts[n];
             populateShifts();
         }
-        else if(this.month.toLowerCase().equals("april")){
-            monthNum = 4;
+        else if(this.monthNum == 4){
+            this.month = "April";
             n = 30;
             shifts = new Shifts[n];
             populateShifts();
         }
-        else if(this.month.toLowerCase().equals("may")){
-            monthNum = 5;
+        else if(this.monthNum == 5){
+            this.month = "May";
             n = 31;
             shifts = new Shifts[n];
             populateShifts();
         }
-        else if(this.month.toLowerCase().equals("june")){
-            monthNum = 6;
+        else if(this.monthNum == 6){
+            this.month = "June";
             n = 30;
             shifts = new Shifts[n];
             populateShifts();
         }
-        else if(this.month.toLowerCase().equals("july")){
-            monthNum = 7;
+        else if(this.monthNum == 7){
+            this.month = "July";
             n = 31;
             shifts = new Shifts[n];
             populateShifts();
         }
-        else if(this.month.toLowerCase().equals("august")){
-            monthNum = 8;
+        else if(this.monthNum == 8){
+            this.month = "August";
             n = 31;
             shifts = new Shifts[n];
             populateShifts();
         }
-        else if(this.month.toLowerCase().equals("september")){
-            monthNum = 9;
+        else if(this.monthNum == 9){
+            this.month = "September";
             n = 30;
             shifts = new Shifts[n];
             populateShifts();
         }
-        else if(this.month.toLowerCase().equals("october")){
-            monthNum = 10;
+        else if(this.monthNum == 10){
+            this.month = "October";
             n = 31;
             shifts = new Shifts[n];
             populateShifts();
         }
-        else if(this.month.toLowerCase().equals("november")){
-            monthNum = 11;
+        else if(this.monthNum == 11){
+            this.month = "November";
             n = 30;
             shifts = new Shifts[n];
             populateShifts();
         }
         else{ //"december"
-            monthNum = 12;
+            this.month = "December";
             n = 31;
             shifts = new Shifts[n];
             populateShifts();

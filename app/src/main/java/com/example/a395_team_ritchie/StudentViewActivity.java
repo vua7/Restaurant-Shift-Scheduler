@@ -21,25 +21,39 @@ public class StudentViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student_view);
 
         final Button addStudent = (Button) findViewById(R.id.addStudentButtonInitial);
-        final Button updateStudent = (Button) findViewById(R.id.updateStudentButtonInitial);
+        //final Button updateStudent = (Button) findViewById(R.id.updateStudentButtonInitial);
         final LinearLayout layout = (LinearLayout) findViewById(R.id.studentLinear);
-
-        /*for (int i = 0; i < 50; i++) {
-            TextView tv = new TextView(this);
-            tv.setText("testing" + i);
-            layout.addView(tv);
-        }*/
 
         database = AppDatabase.getInstance(this);
         final StudentDao studentDao = database.getStudentDao();
 
         List<Student> dbStudents = studentDao.getAllStudents();
-        System.out.println(dbStudents);
+        //System.out.println(dbStudents);
 
-        for (int i = 0; i < dbStudents.size(); i++) {
+        /*for (int i = 0; i < dbStudents.size(); i++) {
             TextView tv = new TextView(this);
             tv.setText(dbStudents.get(i).toString());
             layout.addView(tv);
+        }*/
+        for (int i = 0; i < dbStudents.size(); i++) {
+            final int sID = dbStudents.get(i).getID();
+            String sName = dbStudents.get(i).getName();
+
+            Button studentBtn = new Button(this);
+            //studentBtn.setLayoutParams(new LayoutParams());
+            studentBtn.setText(sName);
+            studentBtn.setId(sID);
+
+            studentBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent editStudentIntent = new Intent(getApplicationContext(), EditStudentActivity.class);
+                    editStudentIntent.putExtra("ID", sID);
+                    startActivity(editStudentIntent);
+                }
+            });
+
+            layout.addView(studentBtn);
         }
 
         addStudent.setOnClickListener(new View.OnClickListener() {
@@ -50,13 +64,13 @@ public class StudentViewActivity extends AppCompatActivity {
             }
         });
 
-        updateStudent.setOnClickListener(new View.OnClickListener() {
+        /*updateStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent updateStudentIntent= new Intent(getApplicationContext(), EditStudentActivity.class);
                 startActivity(updateStudentIntent);
             }
+        });*/
 
-        });
     }
 }

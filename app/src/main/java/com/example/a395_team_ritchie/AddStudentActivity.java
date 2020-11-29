@@ -72,7 +72,7 @@ public class AddStudentActivity extends AppCompatActivity {
                 Boolean swSwitchMondayPM = tempMondayPMSwitch.isChecked();
 
                 if(swStateMonday){
-                    if(swSwitchMondayAM && swSwitchMondayPM){}
+                    if((swSwitchMondayAM && swSwitchMondayPM) || (!swSwitchMondayAM && !swSwitchMondayPM)){}
                     else if(swSwitchMondayAM){
                         days.add("Monday");
                         times.add("morning");
@@ -95,7 +95,7 @@ public class AddStudentActivity extends AppCompatActivity {
                 Boolean swSwitchTuesdayPM = tempTuesdayPMSwitch.isChecked();
 
                 if(swStateTuesday){
-                    if(swSwitchTuesdayAM && swSwitchTuesdayPM){}
+                    if((swSwitchTuesdayAM && swSwitchTuesdayPM) || (!swSwitchTuesdayAM && !swSwitchTuesdayPM)){}
                     else if(swSwitchTuesdayAM){
                         days.add("Tuesday");
                         times.add("morning");
@@ -118,7 +118,7 @@ public class AddStudentActivity extends AppCompatActivity {
                 Boolean swSwitchWednesdayPM = tempWednesdayPMSwitch.isChecked();
 
                 if(swStateWednesday){
-                    if(swSwitchWednesdayAM && swSwitchWednesdayPM){}
+                    if((swSwitchWednesdayAM && swSwitchWednesdayPM) || (!swSwitchWednesdayAM && !swSwitchWednesdayPM)){}
                     else if(swSwitchWednesdayAM){
                         days.add("Wednesday");
                         times.add("morning");
@@ -141,7 +141,7 @@ public class AddStudentActivity extends AppCompatActivity {
                 Boolean swSwitchThursdayPM = tempThursdayPMSwitch.isChecked();
 
                 if(swStateThursday){
-                    if(swSwitchThursdayAM && swSwitchThursdayPM){}
+                    if((swSwitchThursdayAM && swSwitchThursdayPM) || (!swSwitchThursdayAM && !swSwitchThursdayPM)){}
                     else if(swSwitchThursdayAM){
                         days.add("Thursday");
                         times.add("morning");
@@ -164,7 +164,7 @@ public class AddStudentActivity extends AppCompatActivity {
                 Boolean swSwitchFridayPM = tempFridayPMSwitch.isChecked();
 
                 if(swStateFriday){
-                    if(swSwitchFridayAM && swSwitchFridayPM){}
+                    if((swSwitchFridayAM && swSwitchFridayPM) || (!swSwitchFridayAM && !swSwitchFridayPM)){}
                     else if(swSwitchFridayAM){
                         days.add("Friday");
                         times.add("morning");
