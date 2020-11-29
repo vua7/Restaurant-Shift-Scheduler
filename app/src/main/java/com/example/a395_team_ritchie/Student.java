@@ -102,6 +102,22 @@ public class Student {
     }
 
     /**
+     * This method returns if the student can open
+     * @return true if they can open, false if they can't
+     */
+    public Boolean canStudentOpen(){
+        return openCapable;
+    }
+
+    /**
+     * This method returns if the student can close
+     * @return true if they can close, false if they can't
+     */
+    public Boolean canStudentClose(){
+        return closeCapable;
+    }
+
+    /**
      * This method indicates of the student is capable of opening and closing
      * @return true if the student can open and close, false if not
      */
