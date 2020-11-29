@@ -55,7 +55,7 @@ public class EditStudentActivity extends AppCompatActivity {
         Switch editFridayPMSwitch = findViewById(R.id.editFridayPMSwitch);
 
         Switch editSaturdaySwitch = findViewById(R.id.editSaturdaySwitch);
-        Switch editSundaySwitch = findViewById(R.id.editSundaySwitch);
+        Switch editSundaySwitch = findViewById(R.id.EditSundaySwitch);
 
         editOpenSwitch.setChecked(editStudent.canStudentOpen());
         editCloseSwitch.setChecked(editStudent.canStudentClose());
@@ -112,5 +112,12 @@ public class EditStudentActivity extends AppCompatActivity {
             editFridayAMSwitch.setChecked(friTime);
             editFridayPMSwitch.setChecked(!friTime);
         }
+        //Saturday
+        Boolean sat = days.contains("Saturday");
+        editSaturdaySwitch.setChecked(sat);
+        //Sunday
+        Boolean sun = days.contains("Sunday");
+        editSundaySwitch.setChecked(sun);
+
     }
 }
