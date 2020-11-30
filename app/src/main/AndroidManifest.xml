@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.a395_team_ritchie">
 
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,14 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ViewSchedule"></activity>
         <activity android:name=".EditStudentActivity" />
-
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
-
         <activity android:name=".ScheduleStudentActivity"/>
-        <activity android:name=".EditStudentActivity" />
         <activity android:name=".DayViewActivity" />
         <activity android:name=".AddStudentActivity" />
         <activity android:name=".StudentViewActivity" />

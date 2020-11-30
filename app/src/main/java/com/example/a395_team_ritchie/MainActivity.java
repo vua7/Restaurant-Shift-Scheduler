@@ -7,9 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
-import android.widget.EditText;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
@@ -43,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button dayButton = (Button) findViewById(R.id.dayButton);
+        Button dayButton = (Button) findViewById(R.id.scheduleButton);
 
 
 
