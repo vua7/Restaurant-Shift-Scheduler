@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ViewSchedule"></activity>
+        <activity android:name=".EditStudentActivity" />
 
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld

@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-
+                /*
                 SimpleDateFormat simpleDate = new SimpleDateFormat("dd/MM/yyyy");
                 String selectedDate = simpleDate.format(new Date(cal.getDate()));
 
@@ -67,7 +67,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent dayIntent = new Intent(getApplicationContext(), DayViewActivity.class);
                 //dayIntent.putExtra("DATE", date);
                 dayIntent.putExtra("DATE", selectedDate);
-                startActivity(dayIntent);
+                startActivity(dayIntent); */
+
+                Intent scheduleIntent = new Intent(getApplicationContext(), ViewSchedule.class);
+                startActivity(scheduleIntent);
             }
         });
     }
