@@ -127,22 +127,25 @@ public class EditStudentActivity extends AppCompatActivity {
         updateStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText editText = findViewById(R.id.studentIDField);
+                EditText editText = findViewById(R.id.editStudentIDField);
+
+                System.out.println("EDITTEXT: " + editText);
+
                 final int tempNum = Integer.parseInt(editText.getText().toString());
                 editStudent.setStudentID(tempNum);
 
-                editText = findViewById(R.id.studentNameField);
+                editText = findViewById(R.id.editStudentNameField);
                 String tempStr = editText.getText().toString();
                 editStudent.setStudentName(tempStr);
 
-                editText = findViewById(R.id.studentEmailField);
+                editText = findViewById(R.id.editStudentEmailField);
                 tempStr = editText.getText().toString();
                 editStudent.setEmail(tempStr);
 
-                Switch tempSwOpen = (Switch) findViewById(R.id.openSwitch);
+                Switch tempSwOpen = (Switch) findViewById(R.id.editOpenSwitch);
                 Boolean swStateOpen = tempSwOpen.isChecked();
 
-                Switch tempSwClose = (Switch) findViewById(R.id.closeSwitch);
+                Switch tempSwClose = (Switch) findViewById(R.id.editCloseSwitch);
                 Boolean swStateClose = tempSwClose.isChecked();
 
                 if (swStateOpen && swStateClose) {
@@ -157,11 +160,11 @@ public class EditStudentActivity extends AppCompatActivity {
                 ArrayList<String> days = new ArrayList<>();
                 ArrayList<String> times = new ArrayList<>();
 
-                Switch tempMondaySwitch = (Switch) findViewById(R.id.mondaySwitch2);
+                Switch tempMondaySwitch = (Switch) findViewById(R.id.editMondaySwitch);
                 Boolean swStateMonday = tempMondaySwitch.isChecked();
-                Switch tempMondayAMSwitch = (Switch) findViewById(R.id.mondayAMSwitch);
+                Switch tempMondayAMSwitch = (Switch) findViewById(R.id.editMondayAMSwitch);
                 Boolean swSwitchMondayAM = tempMondayAMSwitch.isChecked();
-                Switch tempMondayPMSwitch = (Switch) findViewById(R.id.mondayPMSwitch);
+                Switch tempMondayPMSwitch = (Switch) findViewById(R.id.editMondayPMSwitch);
                 Boolean swSwitchMondayPM = tempMondayPMSwitch.isChecked();
 
                 if(swStateMonday){
@@ -180,11 +183,11 @@ public class EditStudentActivity extends AppCompatActivity {
                     }
                 }
 
-                Switch tempTuesdaySwitch = (Switch) findViewById(R.id.tuesdaySwitch);
+                Switch tempTuesdaySwitch = (Switch) findViewById(R.id.editTuesdaySwitch);
                 Boolean swStateTuesday = tempTuesdaySwitch.isChecked();
-                Switch tempTuesdayAMSwitch = (Switch) findViewById(R.id.tuesdayAMSwitch);
+                Switch tempTuesdayAMSwitch = (Switch) findViewById(R.id.editTuesdayAMSwitch);
                 Boolean swSwitchTuesdayAM = tempTuesdayAMSwitch.isChecked();
-                Switch tempTuesdayPMSwitch = (Switch) findViewById(R.id.tudesdayPMSwitch);
+                Switch tempTuesdayPMSwitch = (Switch) findViewById(R.id.editTuesdayPMSwitch);
                 Boolean swSwitchTuesdayPM = tempTuesdayPMSwitch.isChecked();
 
                 if(swStateTuesday){
@@ -203,11 +206,11 @@ public class EditStudentActivity extends AppCompatActivity {
                     }
                 }
 
-                Switch tempWednesdaySwitch = (Switch) findViewById(R.id.wednesdaySwitch);
+                Switch tempWednesdaySwitch = (Switch) findViewById(R.id.editWednesdaySwitch);
                 Boolean swStateWednesday = tempWednesdaySwitch.isChecked();
-                Switch tempWednesdayAMSwitch = (Switch) findViewById(R.id.wednesdayAMSwitch);
+                Switch tempWednesdayAMSwitch = (Switch) findViewById(R.id.editWednesdayAMSwitch);
                 Boolean swSwitchWednesdayAM = tempWednesdayAMSwitch.isChecked();
-                Switch tempWednesdayPMSwitch = (Switch) findViewById(R.id.wednesdayPMSwitch);
+                Switch tempWednesdayPMSwitch = (Switch) findViewById(R.id.editWednesdayPMSwitch);
                 Boolean swSwitchWednesdayPM = tempWednesdayPMSwitch.isChecked();
 
                 if(swStateWednesday){
@@ -226,11 +229,11 @@ public class EditStudentActivity extends AppCompatActivity {
                     }
                 }
 
-                Switch tempThursdaySwitch = (Switch) findViewById(R.id.thursdaySwitch);
+                Switch tempThursdaySwitch = (Switch) findViewById(R.id.editThursdaySwitch);
                 Boolean swStateThursday = tempThursdaySwitch.isChecked();
-                Switch tempThursdayAMSwitch = (Switch) findViewById(R.id.thursdayAMSwitch);
+                Switch tempThursdayAMSwitch = (Switch) findViewById(R.id.editThursdayAMSwitch);
                 Boolean swSwitchThursdayAM = tempThursdayAMSwitch.isChecked();
-                Switch tempThursdayPMSwitch = (Switch) findViewById(R.id.thursdayPMSwitch);
+                Switch tempThursdayPMSwitch = (Switch) findViewById(R.id.editThursdayPMSwitch);
                 Boolean swSwitchThursdayPM = tempThursdayPMSwitch.isChecked();
 
                 if(swStateThursday){
@@ -249,11 +252,11 @@ public class EditStudentActivity extends AppCompatActivity {
                     }
                 }
 
-                Switch tempFridaySwitch = (Switch) findViewById(R.id.fridaySwitch);
+                Switch tempFridaySwitch = (Switch) findViewById(R.id.editFridaySwitch);
                 Boolean swStateFriday = tempFridaySwitch.isChecked();
-                Switch tempFridayAMSwitch = (Switch) findViewById(R.id.fridayAMSwitch);
+                Switch tempFridayAMSwitch = (Switch) findViewById(R.id.editFridayAMSwitch);
                 Boolean swSwitchFridayAM = tempFridayAMSwitch.isChecked();
-                Switch tempFridayPMSwitch = (Switch) findViewById(R.id.fridayPMSwitch);
+                Switch tempFridayPMSwitch = (Switch) findViewById(R.id.editFridayPMSwitch);
                 Boolean swSwitchFridayPM = tempFridayPMSwitch.isChecked();
 
                 if(swStateFriday){
@@ -272,7 +275,7 @@ public class EditStudentActivity extends AppCompatActivity {
                     }
                 }
 
-                Switch tempSaturdaySwitch = (Switch) findViewById(R.id.saturdaySwitch);
+                Switch tempSaturdaySwitch = (Switch) findViewById(R.id.editSaturdaySwitch);
                 Boolean swStateSaturday = tempSaturdaySwitch.isChecked();
 
                 if(swStateSaturday){
@@ -282,7 +285,7 @@ public class EditStudentActivity extends AppCompatActivity {
                     editStudent.setTimes((times));
                 }
 
-                Switch tempSundaySwitch = (Switch) findViewById(R.id.sundaySwitch);
+                Switch tempSundaySwitch = (Switch) findViewById(R.id.editSundaySwitch);
                 Boolean swStateSunday = tempSundaySwitch.isChecked();
 
                 if(swStateSunday){
