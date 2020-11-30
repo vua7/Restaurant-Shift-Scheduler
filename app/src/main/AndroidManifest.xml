@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ViewSchedule"></activity>
         <activity android:name=".EditStudentActivity" />
+        <activity android:name=".ScheduleStudentActivity"/>
         <activity android:name=".DayViewActivity" />
         <activity android:name=".AddStudentActivity" />
         <activity android:name=".StudentViewActivity" />
