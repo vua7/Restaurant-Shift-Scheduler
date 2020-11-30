@@ -12,4 +12,10 @@
     <string name="opening_capable">Opening Capable?</string>
     <string name="closing_capable">Closing Capable?</string>
     <string name="monday">Monday</string>
+    <string name="title_activity_schedule_student">ScheduleStudentActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>
