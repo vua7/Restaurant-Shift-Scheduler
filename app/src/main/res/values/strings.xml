@@ -12,4 +12,5 @@
     <string name="opening_capable">Opening Capable?</string>
     <string name="closing_capable">Closing Capable?</string>
     <string name="monday">Monday</string>
+    <string name="schedule">Schedule</string>
 </resources>
