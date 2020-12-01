@@ -64,119 +64,109 @@ public class AddStudentActivity extends AppCompatActivity {
                 ArrayList<String> days = new ArrayList<>();
                 ArrayList<String> times = new ArrayList<>();
 
-                Switch tempMondaySwitch = (Switch) findViewById(R.id.mondaySwitch2);
-                Boolean swStateMonday = tempMondaySwitch.isChecked();
+                //Switch tempMondaySwitch = (Switch) findViewById(R.id.mondaySwitch2);
+                //Boolean swStateMonday = tempMondaySwitch.isChecked();
                 Switch tempMondayAMSwitch = (Switch) findViewById(R.id.mondayAMSwitch);
                 Boolean swSwitchMondayAM = tempMondayAMSwitch.isChecked();
                 Switch tempMondayPMSwitch = (Switch) findViewById(R.id.mondayPMSwitch);
                 Boolean swSwitchMondayPM = tempMondayPMSwitch.isChecked();
 
-                if(swStateMonday){
-                    if((swSwitchMondayAM && swSwitchMondayPM) || (!swSwitchMondayAM && !swSwitchMondayPM)){}
-                    else if(swSwitchMondayAM){
-                        days.add("Monday");
-                        times.add("morning");
-                        newStudent.setDays(days);
-                        newStudent.setTimes((times));
-                    }
-                    else if(swSwitchMondayPM){
-                        days.add("Monday");
-                        times.add("afternoon");
-                        newStudent.setDays(days);
-                        newStudent.setTimes((times));
-                    }
+                if((swSwitchMondayAM && swSwitchMondayPM) || (!swSwitchMondayAM && !swSwitchMondayPM)){}
+                else if(swSwitchMondayAM){
+                    days.add("Monday");
+                    times.add("morning");
+                    newStudent.setDays(days);
+                    newStudent.setTimes((times));
+                }
+                else if(swSwitchMondayPM){
+                    days.add("Monday");
+                    times.add("afternoon");
+                    newStudent.setDays(days);
+                    newStudent.setTimes((times));
                 }
 
-                Switch tempTuesdaySwitch = (Switch) findViewById(R.id.tuesdaySwitch);
-                Boolean swStateTuesday = tempTuesdaySwitch.isChecked();
+                //Switch tempTuesdaySwitch = (Switch) findViewById(R.id.tuesdaySwitch);
+                //Boolean swStateTuesday = tempTuesdaySwitch.isChecked();
                 Switch tempTuesdayAMSwitch = (Switch) findViewById(R.id.tuesdayAMSwitch);
                 Boolean swSwitchTuesdayAM = tempTuesdayAMSwitch.isChecked();
                 Switch tempTuesdayPMSwitch = (Switch) findViewById(R.id.tudesdayPMSwitch);
                 Boolean swSwitchTuesdayPM = tempTuesdayPMSwitch.isChecked();
 
-                if(swStateTuesday){
-                    if((swSwitchTuesdayAM && swSwitchTuesdayPM) || (!swSwitchTuesdayAM && !swSwitchTuesdayPM)){}
-                    else if(swSwitchTuesdayAM){
-                        days.add("Tuesday");
-                        times.add("morning");
-                        newStudent.setDays(days);
-                        newStudent.setTimes((times));
-                    }
-                    else if(swSwitchTuesdayPM){
-                        days.add("Tuesday");
-                        times.add("afternoon");
-                        newStudent.setDays(days);
-                        newStudent.setTimes((times));
-                    }
+                if((swSwitchTuesdayAM && swSwitchTuesdayPM) || (!swSwitchTuesdayAM && !swSwitchTuesdayPM)){}
+                else if(swSwitchTuesdayAM){
+                    days.add("Tuesday");
+                    times.add("morning");
+                    newStudent.setDays(days);
+                    newStudent.setTimes((times));
+                }
+                else if(swSwitchTuesdayPM){
+                    days.add("Tuesday");
+                    times.add("afternoon");
+                    newStudent.setDays(days);
+                    newStudent.setTimes((times));
                 }
 
-                Switch tempWednesdaySwitch = (Switch) findViewById(R.id.wednesdaySwitch);
-                Boolean swStateWednesday = tempWednesdaySwitch.isChecked();
+                //Switch tempWednesdaySwitch = (Switch) findViewById(R.id.wednesdaySwitch);
+                //Boolean swStateWednesday = tempWednesdaySwitch.isChecked();
                 Switch tempWednesdayAMSwitch = (Switch) findViewById(R.id.wednesdayAMSwitch);
                 Boolean swSwitchWednesdayAM = tempWednesdayAMSwitch.isChecked();
                 Switch tempWednesdayPMSwitch = (Switch) findViewById(R.id.wednesdayPMSwitch);
                 Boolean swSwitchWednesdayPM = tempWednesdayPMSwitch.isChecked();
 
-                if(swStateWednesday){
-                    if((swSwitchWednesdayAM && swSwitchWednesdayPM) || (!swSwitchWednesdayAM && !swSwitchWednesdayPM)){}
-                    else if(swSwitchWednesdayAM){
-                        days.add("Wednesday");
-                        times.add("morning");
-                        newStudent.setDays(days);
-                        newStudent.setTimes((times));
-                    }
-                    else if(swSwitchWednesdayPM){
-                        days.add("Wednesday");
-                        times.add("afternoon");
-                        newStudent.setDays(days);
-                        newStudent.setTimes((times));
-                    }
+                if((swSwitchWednesdayAM && swSwitchWednesdayPM) || (!swSwitchWednesdayAM && !swSwitchWednesdayPM)){}
+                else if(swSwitchWednesdayAM){
+                    days.add("Wednesday");
+                    times.add("morning");
+                    newStudent.setDays(days);
+                    newStudent.setTimes((times));
+                }
+                else if(swSwitchWednesdayPM){
+                    days.add("Wednesday");
+                    times.add("afternoon");
+                    newStudent.setDays(days);
+                    newStudent.setTimes((times));
                 }
 
-                Switch tempThursdaySwitch = (Switch) findViewById(R.id.thursdaySwitch);
-                Boolean swStateThursday = tempThursdaySwitch.isChecked();
+                //Switch tempThursdaySwitch = (Switch) findViewById(R.id.thursdaySwitch);
+                //Boolean swStateThursday = tempThursdaySwitch.isChecked();
                 Switch tempThursdayAMSwitch = (Switch) findViewById(R.id.thursdayAMSwitch);
                 Boolean swSwitchThursdayAM = tempThursdayAMSwitch.isChecked();
                 Switch tempThursdayPMSwitch = (Switch) findViewById(R.id.thursdayPMSwitch);
                 Boolean swSwitchThursdayPM = tempThursdayPMSwitch.isChecked();
 
-                if(swStateThursday){
-                    if((swSwitchThursdayAM && swSwitchThursdayPM) || (!swSwitchThursdayAM && !swSwitchThursdayPM)){}
-                    else if(swSwitchThursdayAM){
-                        days.add("Thursday");
-                        times.add("morning");
-                        newStudent.setDays(days);
-                        newStudent.setTimes((times));
-                    }
-                    else if(swSwitchThursdayPM){
-                        days.add("Thursday");
-                        times.add("afternoon");
-                        newStudent.setDays(days);
-                        newStudent.setTimes((times));
-                    }
+                if((swSwitchThursdayAM && swSwitchThursdayPM) || (!swSwitchThursdayAM && !swSwitchThursdayPM)){}
+                else if(swSwitchThursdayAM){
+                    days.add("Thursday");
+                    times.add("morning");
+                    newStudent.setDays(days);
+                    newStudent.setTimes((times));
+                }
+                else if(swSwitchThursdayPM){
+                    days.add("Thursday");
+                    times.add("afternoon");
+                    newStudent.setDays(days);
+                    newStudent.setTimes((times));
                 }
 
-                Switch tempFridaySwitch = (Switch) findViewById(R.id.fridaySwitch);
-                Boolean swStateFriday = tempFridaySwitch.isChecked();
+                //Switch tempFridaySwitch = (Switch) findViewById(R.id.fridaySwitch);
+                //Boolean swStateFriday = tempFridaySwitch.isChecked();
                 Switch tempFridayAMSwitch = (Switch) findViewById(R.id.fridayAMSwitch);
                 Boolean swSwitchFridayAM = tempFridayAMSwitch.isChecked();
                 Switch tempFridayPMSwitch = (Switch) findViewById(R.id.fridayPMSwitch);
                 Boolean swSwitchFridayPM = tempFridayPMSwitch.isChecked();
 
-                if(swStateFriday){
-                    if((swSwitchFridayAM && swSwitchFridayPM) || (!swSwitchFridayAM && !swSwitchFridayPM)){}
-                    else if(swSwitchFridayAM){
-                        days.add("Friday");
-                        times.add("morning");
-                        newStudent.setDays(days);
-                        newStudent.setTimes((times));
-                    }
-                    else if(swSwitchFridayPM){
-                        days.add("Friday");
-                        times.add("afternoon");
-                        newStudent.setDays(days);
-                        newStudent.setTimes((times));
-                    }
+                if((swSwitchFridayAM && swSwitchFridayPM) || (!swSwitchFridayAM && !swSwitchFridayPM)){}
+                else if(swSwitchFridayAM){
+                    days.add("Friday");
+                    times.add("morning");
+                    newStudent.setDays(days);
+                    newStudent.setTimes((times));
+                }
+                else if(swSwitchFridayPM){
+                    days.add("Friday");
+                    times.add("afternoon");
+                    newStudent.setDays(days);
+                    newStudent.setTimes((times));
                 }
 
                 Switch tempSaturdaySwitch = (Switch) findViewById(R.id.saturdaySwitch);

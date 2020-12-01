@@ -80,7 +80,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/studentIDField" />
 
-            <Switch
+            <TextView
                 android:id="@+id/wednesdaySwitch"
                 android:layout_width="125dp"
                 android:layout_height="26dp"
@@ -90,7 +90,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tuesdaySwitch" />
 
-            <Switch
+            <TextView
                 android:id="@+id/mondaySwitch2"
                 android:layout_width="124dp"
                 android:layout_height="25dp"
@@ -191,7 +191,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/fridayAMSwitch" />
 
-            <Switch
+            <TextView
                 android:id="@+id/thursdaySwitch"
                 android:layout_width="125dp"
                 android:layout_height="26dp"
@@ -213,7 +213,7 @@
                 app:layout_constraintStart_toEndOf="@+id/thursdaySwitch"
                 app:layout_constraintTop_toBottomOf="@+id/wednesdayAMSwitch" />
 
-            <Switch
+            <TextView
                 android:id="@+id/fridaySwitch"
                 android:layout_width="125dp"
                 android:layout_height="24dp"
@@ -244,7 +244,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/saturdaySwitch" />
 
-            <Switch
+            <TextView
                 android:id="@+id/tuesdaySwitch"
                 android:layout_width="125dp"
                 android:layout_height="26dp"
