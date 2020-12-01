@@ -42,13 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button dayButton = (Button) findViewById(R.id.scheduleButton);
 
-
-
         // ------------------------------------------
-
-
-        
-
 
         dayButton.setOnClickListener(new View.OnClickListener() {
 
