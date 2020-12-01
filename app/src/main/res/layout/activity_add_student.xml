@@ -161,11 +161,13 @@
                 android:layout_width="251dp"
                 android:layout_height="31dp"
                 android:layout_marginTop="10dp"
+                android:checked="false"
                 android:text="@string/opening_capable"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/studentEmailField" />
+                app:layout_constraintTop_toBottomOf="@+id/studentEmailField"
+                tools:checked="false" />
 
             <Switch
                 android:id="@+id/mondayAMSwitch"

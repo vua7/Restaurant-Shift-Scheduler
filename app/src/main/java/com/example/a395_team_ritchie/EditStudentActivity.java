@@ -153,8 +153,13 @@ public class EditStudentActivity extends AppCompatActivity {
                     editStudent.canClose();
                 } else if (swStateOpen) {
                     editStudent.canOpen();
+                    editStudent.closeCapable = false;
                 } else if (swStateClose) {
                     editStudent.canClose();
+                    editStudent.openCapable = false;
+                } else {
+                    editStudent.openCapable = false;
+                    editStudent.closeCapable = false;
                 }
 
                 ArrayList<String> days = new ArrayList<>();

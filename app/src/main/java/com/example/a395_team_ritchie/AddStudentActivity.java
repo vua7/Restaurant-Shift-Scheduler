@@ -210,6 +210,8 @@ public class AddStudentActivity extends AppCompatActivity {
                 List<Student> dbStudents = studentDao.getAllStudents();
                 System.out.println(dbStudents);
 
+                Intent studentIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(studentIntent);
             }
         });
     }
