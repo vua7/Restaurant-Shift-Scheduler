@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">395-Team-Ritchie</string>
+    <string name="app_name">Restaurant Shift Scheduler</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">View Students</string>
     <string name="add_student">Add Student</string>
